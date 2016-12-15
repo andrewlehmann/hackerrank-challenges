@@ -12,6 +12,7 @@
  return back the head of the linked list in the below method
 """
 
+
 def Insert(head, data):
     new_node = Node(data, None)
     cur_node = head
