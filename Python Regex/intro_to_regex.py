@@ -1,6 +1,7 @@
 import re
 import sys
 
+
 inputs = []
 num = int(raw_input())
 
