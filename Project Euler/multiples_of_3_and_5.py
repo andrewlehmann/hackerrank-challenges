@@ -2,7 +2,7 @@
 import math
 
 # This program uses the summation formula to find 
-# the sum of all multiples of 3 or 5 below a number n. 
+# the sum of all multiples of 3 and 5 below a number n. 
 # This method was chosen due to complexity reducution 
 # and massive time saving on very large numbers
 
