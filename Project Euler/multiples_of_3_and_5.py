@@ -63,7 +63,7 @@ if __name__ == '__main__':
         num_of_iters = [math.floor((n - 1) / 3), 
                         math.floor((n - 1) / 5), 
                         math.floor((n - 1) / 15)]
-        # using >> 1 to divide by 2 due to some 
+        # using >> 1 to divide by 2 bitwise due to some 
         # odd behavior regarding rounding behavior
         sum_threes = (num_of_iters[0]
                       * (first_iter[0] + last_iter[0])
