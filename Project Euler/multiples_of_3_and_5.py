@@ -67,15 +67,15 @@ if __name__ == '__main__':
         # odd behavior regarding rounding behavior
         sum_threes = (num_of_iters[0]  \
                       * (first_iter[0] \
-                      + last_iter[0])) \
+                        + last_iter[0])) \
                       >> 1
         sum_fives = (num_of_iters[1]  \
                      * (first_iter[1] \
-                     + last_iter[1])) \
+                        + last_iter[1])) \
                      >> 1
         sum_fifteens = (num_of_iters[2]  \
                         * (first_iter[2] \
-                        + last_iter[2])) \
+                            + last_iter[2])) \
                         >> 1
 
         total = sum_threes+ sum_fives - sum_fifteens
