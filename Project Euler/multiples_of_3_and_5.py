@@ -1,10 +1,10 @@
 #!/bin/python3
 import math
 
-# This program uses the summation formula to find 
-# the sum of all multiples of 3 or 5 below a number n. 
-# This method was chosen due to complexity reducution 
-# and massive time saving on very large numbers
+# This program uses a summation formula identity to 
+# find the sum of all multiples of 3 or 5 below a 
+# number n. This method was chosen due to complexity
+# reducution and massive time saving on very large numbers
 
 def set_first_iter(n):
     if(n >= 15):
