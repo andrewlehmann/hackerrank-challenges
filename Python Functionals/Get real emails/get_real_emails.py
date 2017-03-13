@@ -1,19 +1,16 @@
-def finals(emails):
-    unsorted = []    
-    bool_list = list(map(lambda x: x.count('@') == 1 and x.split('@', 1)[1].count('.') == 1, emails))
-    for i in range(0, len(emails)):
-        if bool_list[i] == True:
-            username, rest = emails[i].split('@', 1)
-            domain, extension = rest.split('.', 1)
-            if username.replace('-', '').replace('_', '').isalnum():
-                if extension.isalnum():
-                    unsorted.append(emails[i])
-    return sorted(unsorted)   
-            
+import re
+def fun(s):
+    return bool(re.match(r'^([A-Za-z0-9_-])+@([A-Za-z0-9])+\.\w{1,3}$', s))
+
+def filter_mail(emails):
+    return list(filter(fun, emails))
 
 if __name__ == '__main__':
+    n = int(input())
     emails = []
-    for _ in range(input()):
-        emails.append(raw_input().strip())
-    output = finals(emails) #finish return statement
-    print output
+    for _ in range(n):
+        emails.append(input())
+
+filtered_emails = filter_mail(emails)
+filtered_emails.sort()
+print(filtered_emails)
