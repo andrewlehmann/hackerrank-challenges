@@ -7,11 +7,18 @@ import java.util.stream.*;
 
 public class Solution {
 
+    static boolean isDivisibleBy5(int number) {
+        return number % 5 == 0;
+    }
+
+    static boolean isGreaterThan38(int number) {
+        return number >= 38;
+    }
 
     static boolean roundChecker(int number) {
         return IntStream.rangeClosed(number, number + 2)
-                        .filter(e -> e >= 38)
-                        .filter(e -> e % 5 == 0)
+                        .filter(Solution::isGreaterThan38)
+                        .filter(Solution::isDivisibleBy5)
                         .count() > 0
             && ((number % 5 != 0));
     }
@@ -24,7 +31,7 @@ public class Solution {
         List<Integer> numbers = Arrays.asList(grades);
 
         return numbers.stream()
-                      .map(e -> calculateRounded(e))
+                      .map(Solution::calculateRounded)
                       .collect(Collectors.toList());
 
     }
@@ -37,6 +44,7 @@ public class Solution {
             grades[grades_i] = in.nextInt();
         }
         List<Integer> result = solve(grades);
+
         result.stream()
               .forEach(System.out::println);
     }
